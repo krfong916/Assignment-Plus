@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27402F1F1DAF5133004A2AC3 /* Simple Table in Resources */ = {isa = PBXBuildFile; fileRef = 27402F1E1DAF5133004A2AC3 /* Simple Table */; };
 		27DA4EBF1DAEC56500E113A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DA4EBE1DAEC56500E113A9 /* AppDelegate.swift */; };
 		27DA4EC11DAEC56500E113A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DA4EC01DAEC56500E113A9 /* ViewController.swift */; };
 		27DA4EC41DAEC56500E113A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27DA4EC21DAEC56500E113A9 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27402F1E1DAF5133004A2AC3 /* Simple Table */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Simple Table"; sourceTree = "<group>"; };
 		27DA4EBB1DAEC56500E113A9 /* Simple Table.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Table.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27DA4EBE1DAEC56500E113A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27DA4EC01DAEC56500E113A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 		27DA4EB21DAEC56500E113A9 = {
 			isa = PBXGroup;
 			children = (
+				27402F1E1DAF5133004A2AC3 /* Simple Table */,
 				27DA4EBD1DAEC56500E113A9 /* Simple Table */,
 				27DA4ED21DAEC56500E113A9 /* Simple TableTests */,
 				27DA4EDD1DAEC56500E113A9 /* Simple TableUITests */,
@@ -231,6 +234,7 @@
 			files = (
 				27DA4EC91DAEC56500E113A9 /* LaunchScreen.storyboard in Resources */,
 				27DA4EC61DAEC56500E113A9 /* Assets.xcassets in Resources */,
+				27402F1F1DAF5133004A2AC3 /* Simple Table in Resources */,
 				27DA4EC41DAEC56500E113A9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +486,7 @@
 				27DA4EE51DAEC56500E113A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27DA4EE61DAEC56500E113A9 /* Build configuration list for PBXNativeTarget "Simple TableTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +495,7 @@
 				27DA4EE81DAEC56500E113A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27DA4EE91DAEC56500E113A9 /* Build configuration list for PBXNativeTarget "Simple TableUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +504,7 @@
 				27DA4EEB1DAEC56500E113A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
