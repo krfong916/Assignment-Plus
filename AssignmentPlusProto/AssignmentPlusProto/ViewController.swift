@@ -21,8 +21,8 @@ class ViewController: UIViewController {
     }
 
     
-    override func viewDidAppear(animated: Bool) {
-        self.performSegueWithIdentifier("loginView", sender: self);
+    override func viewDidAppear(_ animated: Bool) {
+        self.performSegue(withIdentifier: "loginView", sender: self);
     }
     
 
