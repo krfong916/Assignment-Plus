@@ -294,7 +294,7 @@
                                     <rect key="frame" x="176" y="524" width="201" height="21"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exD-Hd-X1k">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exD-Hd-X1k">
                                 <rect key="frame" x="339" y="520" width="47" height="30"/>
                                 <state key="normal" title="Sign In"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
