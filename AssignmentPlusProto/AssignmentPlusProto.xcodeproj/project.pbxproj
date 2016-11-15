@@ -16,6 +16,7 @@
 		271651CA1DC72B890054BC9D /* AssignmentPlusProtoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271651C91DC72B890054BC9D /* AssignmentPlusProtoUITests.swift */; };
 		D147A29A1DDAE208006F837C /* studentSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D147A2991DDAE208006F837C /* studentSignUpViewController.swift */; };
 		D147A29C1DDAE270006F837C /* studentLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D147A29B1DDAE270006F837C /* studentLogInViewController.swift */; };
+		D147A29E1DDAF9C1006F837C /* studentHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D147A29D1DDAF9C1006F837C /* studentHomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		271651CB1DC72B890054BC9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D147A2991DDAE208006F837C /* studentSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = studentSignUpViewController.swift; sourceTree = "<group>"; };
 		D147A29B1DDAE270006F837C /* studentLogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = studentLogInViewController.swift; sourceTree = "<group>"; };
+		D147A29D1DDAF9C1006F837C /* studentHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = studentHomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				271651B51DC72B890054BC9D /* Info.plist */,
 				D147A2991DDAE208006F837C /* studentSignUpViewController.swift */,
 				D147A29B1DDAE270006F837C /* studentLogInViewController.swift */,
+				D147A29D1DDAF9C1006F837C /* studentHomeViewController.swift */,
 			);
 			path = AssignmentPlusProto;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D147A29E1DDAF9C1006F837C /* studentHomeViewController.swift in Sources */,
 				D147A29C1DDAE270006F837C /* studentLogInViewController.swift in Sources */,
 				271651AC1DC72B890054BC9D /* ViewController.swift in Sources */,
 				271651AA1DC72B890054BC9D /* AppDelegate.swift in Sources */,

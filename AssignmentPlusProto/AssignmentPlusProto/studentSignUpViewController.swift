@@ -46,14 +46,14 @@ class studentSignUpViewController: UIViewController {
         }
         
         //store data
-        
+        UserDefaults.standard.setValue(studEmail, forKey: "studentEmail")
+        UserDefaults.standard.setValue(studPassword, forKey: "studentPassword")
+        UserDefaults.standard.synchronize()
         
         //successful sign up message
         let alert = UIAlertController(title: "Thank you!", message: "You are now registered.", preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
         dismiss(animated: true, completion: nil)
-        
-        
         
         
     }

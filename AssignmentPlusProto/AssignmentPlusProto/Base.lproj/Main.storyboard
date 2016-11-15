@@ -40,7 +40,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="127" y="467"/>
+            <point key="canvasLocation" x="124" y="466"/>
         </scene>
         <!--Student Or Teacher Log In-->
         <scene sceneID="eLv-5g-1d2">
@@ -154,12 +154,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p7l-cv-3SH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="813.60000000000002" y="442.12893553223392"/>
+            <point key="canvasLocation" x="780" y="466"/>
         </scene>
-        <!--Student Sign In-->
+        <!--Student Log In View Controller-->
         <scene sceneID="FNf-cu-wor">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="b6i-wu-tUM" customClass="studentSignIn" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="b6i-wu-tUM" customClass="studentLogInViewController" customModule="AssignmentPlusProto" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kN4-5b-swO"/>
                         <viewControllerLayoutGuide type="bottom" id="NUp-jE-tbx"/>
@@ -226,6 +226,9 @@
                                 </constraints>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="studLogInButton:" destination="b6i-wu-tUM" eventType="touchUpInside" id="Fmd-oJ-xNb"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="education_doodle_sm" translatesAutoresizingMaskIntoConstraints="NO" id="xcH-2U-bgY">
                                 <rect key="frame" x="0.0" y="0.0" width="376" height="250.5"/>
@@ -276,10 +279,14 @@
                             <constraint firstItem="tk6-C9-PMy" firstAttribute="top" secondItem="moh-9m-kEh" secondAttribute="bottom" constant="132" id="zOc-IR-fgy"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="studPassword" destination="W43-5T-qlt" id="Pqo-J9-BWS"/>
+                        <outlet property="studUsername" destination="tk6-C9-PMy" id="J0H-zo-PeS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kUD-rq-xvb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1608.8" y="441.22938530734638"/>
+            <point key="canvasLocation" x="1458" y="466"/>
         </scene>
         <!--Teacher Sign In-->
         <scene sceneID="yE4-cq-wAo">
@@ -409,7 +416,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aI6-ba-qns" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1189.5999999999999" y="1334.4827586206898"/>
+            <point key="canvasLocation" x="1457" y="1229"/>
+        </scene>
+        <!--Student Home-->
+        <scene sceneID="mFT-20-5ok">
+            <objects>
+                <viewController storyboardIdentifier="studentHome" title="Student Home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6P3-1X-VW1" customClass="studentHomeViewController" customModule="AssignmentPlusProto" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tug-Tv-Qvz"/>
+                        <viewControllerLayoutGuide type="bottom" id="sde-Rt-IgN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U0U-eA-uay">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AsX-fF-3iq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2814" y="-204"/>
         </scene>
         <!--Student Sign Up View Controller-->
         <scene sceneID="kv5-pG-aoK">
@@ -575,15 +600,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kJS-u6-q27" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2479.1999999999998" y="470.91454272863569"/>
+            <point key="canvasLocation" x="2145" y="466"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bJT-RM-25p">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lCl-Rk-EJs" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="600"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wQG-gQ-e5a">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -763,7 +786,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r8V-g6-Wjx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1936.8" y="1333.5832083958021"/>
+            <point key="canvasLocation" x="2145" y="1228"/>
         </scene>
     </scenes>
     <resources>
@@ -773,6 +796,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="0og-Da-1Bn"/>
         <segue reference="af8-YB-zdv"/>
-        <segue reference="Unf-cC-Ihj"/>
+        <segue reference="v0e-Mf-2oD"/>
     </inferredMetricsTieBreakers>
 </document>
