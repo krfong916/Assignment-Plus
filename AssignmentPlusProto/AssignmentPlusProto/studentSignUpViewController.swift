@@ -49,6 +49,10 @@ class studentSignUpViewController: UIViewController {
         
         
         //successful sign up message
+        let alert = UIAlertController(title: "Thank you!", message: "You are now registered.", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
+        dismiss(animated: true, completion: nil)
+        
         
         
         
