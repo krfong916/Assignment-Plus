@@ -169,7 +169,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBy-HP-aKK">
-                                <rect key="frame" x="256" y="533" width="76" height="28"/>
+                                <rect key="frame" x="256" y="533.5" width="76" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="Sign in here."/>
                                 <connections>
@@ -177,13 +177,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you a teacher?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbZ-7a-fpD">
-                                <rect key="frame" x="44" y="539" width="114" height="16"/>
+                                <rect key="frame" x="44" y="539.5" width="114" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="W43-5T-qlt" userLabel="SignInPasswordForm">
-                                <rect key="frame" x="44" y="339" width="288" height="30"/>
+                                <rect key="frame" x="44" y="339.5" width="288" height="30"/>
                                 <color key="backgroundColor" red="0.95764038599733092" green="0.95764038599733092" blue="0.95764038599733092" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="288" id="Isz-oz-e0g"/>
@@ -193,7 +193,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="tk6-C9-PMy" userLabel="SignInUsernameForm">
-                                <rect key="frame" x="44" y="291" width="288" height="30"/>
+                                <rect key="frame" x="44" y="291.5" width="288" height="30"/>
                                 <color key="backgroundColor" red="0.95999997854232788" green="0.95999997854232788" blue="0.95999997854232788" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="288" id="0Ol-hb-gvX"/>
@@ -202,7 +202,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtC-He-lw1" userLabel="SignInSignUpButton">
-                                <rect key="frame" x="261" y="422" width="71" height="24"/>
+                                <rect key="frame" x="261" y="422.5" width="71" height="24.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="71" id="J1W-5a-L44"/>
                                 </constraints>
@@ -213,13 +213,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1p-F4-leU" userLabel="SignInNoAccountText">
-                                <rect key="frame" x="44" y="428" width="209" height="16"/>
+                                <rect key="frame" x="44" y="428.5" width="209" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ya0-6W-4Y9" userLabel="SignInLoginButton">
-                                <rect key="frame" x="44" y="384" width="288" height="30"/>
+                                <rect key="frame" x="44" y="384.5" width="288" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="288" id="SCv-Yh-UMH"/>
@@ -228,7 +228,7 @@
                                 <state key="normal" title="Login"/>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="education_doodle_sm" translatesAutoresizingMaskIntoConstraints="NO" id="xcH-2U-bgY">
-                                <rect key="frame" x="0.0" y="0.0" width="374" height="250"/>
+                                <rect key="frame" x="0.0" y="0.0" width="376" height="250.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xcH-2U-bgY" secondAttribute="height" multiplier="3:2" id="tFT-k2-wDx"/>
                                 </constraints>
@@ -411,10 +411,10 @@
             </objects>
             <point key="canvasLocation" x="1189.5999999999999" y="1334.4827586206898"/>
         </scene>
-        <!--Student Sign Up-->
+        <!--Student Sign Up View Controller-->
         <scene sceneID="kv5-pG-aoK">
             <objects>
-                <viewController id="1LR-kF-5zc" customClass="studentSignUp" sceneMemberID="viewController">
+                <viewController id="1LR-kF-5zc" customClass="studentSignUpViewController" customModule="AssignmentPlusProto" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BJK-Zs-BZ3"/>
                         <viewControllerLayoutGuide type="bottom" id="XKB-fL-ylS"/>
@@ -501,6 +501,9 @@
                                 </constraints>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signUpButton:" destination="1LR-kF-5zc" eventType="touchUpInside" id="xMv-yE-UJM"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3c4-ab-hAP">
                                 <rect key="frame" x="16" y="565" width="201" height="21"/>
@@ -562,6 +565,13 @@
                             <constraint firstItem="3c4-ab-hAP" firstAttribute="leading" secondItem="XN9-Dq-F9H" secondAttribute="leading" id="yJo-u8-Rbq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="studEmailText" destination="UYa-Uf-311" id="jcE-8g-dyV"/>
+                        <outlet property="studFirstText" destination="QVd-Yp-E3v" id="QNu-FW-1YH"/>
+                        <outlet property="studLastText" destination="6K4-OX-2fv" id="Qln-A1-r4R"/>
+                        <outlet property="studPasswordText" destination="8s6-yI-8D9" id="zwj-yk-WVQ"/>
+                        <outlet property="studSchoolText" destination="iL6-xb-nJX" id="NFt-Nf-gbI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kJS-u6-q27" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -761,8 +771,8 @@
         <image name="education_doodle_teacher_sm" width="301" height="197"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Iwh-92-5tu"/>
         <segue reference="0og-Da-1Bn"/>
-        <segue reference="xzP-Mi-d6y"/>
+        <segue reference="af8-YB-zdv"/>
+        <segue reference="Unf-cC-Ihj"/>
     </inferredMetricsTieBreakers>
 </document>

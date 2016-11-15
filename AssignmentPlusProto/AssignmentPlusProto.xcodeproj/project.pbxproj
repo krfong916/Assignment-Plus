@@ -14,6 +14,8 @@
 		271651B41DC72B890054BC9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 271651B21DC72B890054BC9D /* LaunchScreen.storyboard */; };
 		271651BF1DC72B890054BC9D /* AssignmentPlusProtoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271651BE1DC72B890054BC9D /* AssignmentPlusProtoTests.swift */; };
 		271651CA1DC72B890054BC9D /* AssignmentPlusProtoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271651C91DC72B890054BC9D /* AssignmentPlusProtoUITests.swift */; };
+		D147A29A1DDAE208006F837C /* studentSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D147A2991DDAE208006F837C /* studentSignUpViewController.swift */; };
+		D147A29C1DDAE270006F837C /* studentLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D147A29B1DDAE270006F837C /* studentLogInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		271651C51DC72B890054BC9D /* AssignmentPlusProtoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssignmentPlusProtoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		271651C91DC72B890054BC9D /* AssignmentPlusProtoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentPlusProtoUITests.swift; sourceTree = "<group>"; };
 		271651CB1DC72B890054BC9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D147A2991DDAE208006F837C /* studentSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = studentSignUpViewController.swift; sourceTree = "<group>"; };
+		D147A29B1DDAE270006F837C /* studentLogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = studentLogInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				271651B01DC72B890054BC9D /* Assets.xcassets */,
 				271651B21DC72B890054BC9D /* LaunchScreen.storyboard */,
 				271651B51DC72B890054BC9D /* Info.plist */,
+				D147A2991DDAE208006F837C /* studentSignUpViewController.swift */,
+				D147A29B1DDAE270006F837C /* studentLogInViewController.swift */,
 			);
 			path = AssignmentPlusProto;
 			sourceTree = "<group>";
@@ -260,8 +266,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D147A29C1DDAE270006F837C /* studentLogInViewController.swift in Sources */,
 				271651AC1DC72B890054BC9D /* ViewController.swift in Sources */,
 				271651AA1DC72B890054BC9D /* AppDelegate.swift in Sources */,
+				D147A29A1DDAE208006F837C /* studentSignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
