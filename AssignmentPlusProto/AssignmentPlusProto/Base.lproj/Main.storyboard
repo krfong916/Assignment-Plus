@@ -290,10 +290,10 @@
             </objects>
             <point key="canvasLocation" x="1458" y="466"/>
         </scene>
-        <!--Teacher Sign In-->
+        <!--Teacher Log In View Controller-->
         <scene sceneID="yE4-cq-wAo">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="dn5-NQ-GCu" customClass="teacherSignIn" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="dn5-NQ-GCu" customClass="teacherLogInViewController" customModule="AssignmentPlusProto" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JCt-z7-GBV"/>
                         <viewControllerLayoutGuide type="bottom" id="0m2-oE-E3G"/>
@@ -328,6 +328,9 @@
                                 </constraints>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="teachLogInButton:" destination="dn5-NQ-GCu" eventType="touchUpInside" id="Dwq-YJ-IIX"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1lh-co-erB" userLabel="SignInNoAccountText">
                                 <rect key="frame" x="44" y="464" width="209" height="16"/>
@@ -415,6 +418,10 @@
                             <constraint firstItem="PhO-TQ-Y4r" firstAttribute="trailing" secondItem="pF8-fg-TCc" secondAttribute="trailing" id="yv8-29-wXH"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="teachPassword" destination="SDj-bu-ZfP" id="UGT-t5-hcc"/>
+                        <outlet property="teachUsername" destination="2ZR-nU-Qaz" id="M2b-ax-IbF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aI6-ba-qns" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -622,10 +629,10 @@
             </objects>
             <point key="canvasLocation" x="-550" y="467"/>
         </scene>
-        <!--Teacher Sign Up-->
+        <!--Teacher Sign Up View Controller-->
         <scene sceneID="jat-60-iRB">
             <objects>
-                <viewController id="kka-92-lMQ" customClass="teacherSignUp" sceneMemberID="viewController">
+                <viewController id="kka-92-lMQ" customClass="teacherSignUpViewController" customModule="AssignmentPlusProto" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YXA-2e-nTb"/>
                         <viewControllerLayoutGuide type="bottom" id="EMd-9P-jjm"/>
@@ -710,6 +717,9 @@
                                 </constraints>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signUpButtonTeacher:" destination="kka-92-lMQ" eventType="touchUpInside" id="Nc6-4w-K6R"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="education_doodle_teacher_sm" translatesAutoresizingMaskIntoConstraints="NO" id="AiU-75-CDQ">
                                 <rect key="frame" x="0.0" y="0.0" width="374" height="214"/>
@@ -730,7 +740,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9AZ-0A-JMf">
-                                <rect key="frame" x="264" y="620.5" width="95" height="33"/>
+                                <rect key="frame" x="264" y="621" width="95" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Sign in here.">
                                     <color key="titleColor" red="0.29411764709999999" green="0.4039215686" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -773,10 +783,35 @@
                             <constraint firstItem="VdR-0W-Rx5" firstAttribute="top" secondItem="h4P-ye-ODQ" secondAttribute="bottom" constant="522" id="xHK-s8-t3I"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="teachEmailText" destination="BYh-F7-y8f" id="1sZ-9X-oIX"/>
+                        <outlet property="teachFirstText" destination="4RB-k1-JyH" id="65I-Yp-zWQ"/>
+                        <outlet property="teachLastText" destination="f6d-HK-1sj" id="0eO-u8-z6M"/>
+                        <outlet property="teachPasswordText" destination="xeD-mx-DsO" id="FSZ-dV-fUU"/>
+                        <outlet property="teachSchoolText" destination="KNf-NA-LuM" id="vth-lT-Eyx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r8V-g6-Wjx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2145" y="1228"/>
+        </scene>
+        <!--Teacher Home View Controller-->
+        <scene sceneID="UAs-23-feH">
+            <objects>
+                <viewController storyboardIdentifier="teacherHome" id="pul-M2-dQf" customClass="teacherHomeViewController" customModule="AssignmentPlusProto" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EKm-0o-Wtj"/>
+                        <viewControllerLayoutGuide type="bottom" id="BWD-o8-87e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Xr-ch-Ane">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nkg-eZ-BhR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2814" y="1896"/>
         </scene>
     </scenes>
     <resources>
@@ -784,8 +819,8 @@
         <image name="education_doodle_teacher_sm" width="301" height="197"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Iwh-92-5tu"/>
-        <segue reference="xzP-Mi-d6y"/>
+        <segue reference="Osh-AH-Aj5"/>
+        <segue reference="af8-YB-zdv"/>
         <segue reference="0og-Da-1Bn"/>
     </inferredMetricsTieBreakers>
 </document>
