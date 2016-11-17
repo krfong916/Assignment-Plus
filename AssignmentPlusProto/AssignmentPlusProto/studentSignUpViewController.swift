@@ -66,6 +66,8 @@ class studentSignUpViewController: UIViewController {
                 self.myAlert(alertMessage:" " + (error?.localizedDescription)! as String)
             }else{
                 print("Student has been created")
+                self.myAlert(alertMessage: "You have successfully created an account!");
+                self.performSegue(withIdentifier: "studentSignUpRedirectToSignIn", sender: self)
             }
         })
         

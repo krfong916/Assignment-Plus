@@ -66,6 +66,8 @@ class teacherSignUpViewController: UIViewController {
                 print(error?.localizedDescription as Any)
             }else{
                 print("Teacher has been created")
+                self.myAlert(alertMessage: "You have successfully created an account!");
+                self.performSegue(withIdentifier: "teacherSignUpRedirectToSignIn", sender: self);
             }
         })
     }
