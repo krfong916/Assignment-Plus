@@ -23,13 +23,7 @@
 		D147A29A1DDAE208006F837C /* studentSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D147A2991DDAE208006F837C /* studentSignUpViewController.swift */; };
 		D147A29C1DDAE270006F837C /* studentLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D147A29B1DDAE270006F837C /* studentLogInViewController.swift */; };
 		D147A29E1DDAF9C1006F837C /* studentHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D147A29D1DDAF9C1006F837C /* studentHomeViewController.swift */; };
-<<<<<<< HEAD
 		E25EB0BFC9ED45B8B5E98F4E /* Pods_AssignmentPlusProtoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E2B43CBB14DC077FA5B548D /* Pods_AssignmentPlusProtoUITests.framework */; };
-=======
-		D1898E111DDC4E7400A05BF5 /* teacherSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1898E101DDC4E7400A05BF5 /* teacherSignUpViewController.swift */; };
-		D1898E131DDC50D300A05BF5 /* teacherLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1898E121DDC50D300A05BF5 /* teacherLogInViewController.swift */; };
-		D1898E151DDC51C700A05BF5 /* teacherHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1898E141DDC51C700A05BF5 /* teacherHomeViewController.swift */; };
->>>>>>> cc4c73c904e10c620365168166b5c973b7f67988
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,14 +72,8 @@
 		D147A2991DDAE208006F837C /* studentSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = studentSignUpViewController.swift; sourceTree = "<group>"; };
 		D147A29B1DDAE270006F837C /* studentLogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = studentLogInViewController.swift; sourceTree = "<group>"; };
 		D147A29D1DDAF9C1006F837C /* studentHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = studentHomeViewController.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		E6B4FE7641C1DBE18262308D /* Pods-AssignmentPlusProtoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AssignmentPlusProtoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AssignmentPlusProtoUITests/Pods-AssignmentPlusProtoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F03E708323DBFE245907550B /* Pods-AssignmentPlusProto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AssignmentPlusProto.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AssignmentPlusProto/Pods-AssignmentPlusProto.debug.xcconfig"; sourceTree = "<group>"; };
-=======
-		D1898E101DDC4E7400A05BF5 /* teacherSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = teacherSignUpViewController.swift; sourceTree = "<group>"; };
-		D1898E121DDC50D300A05BF5 /* teacherLogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = teacherLogInViewController.swift; sourceTree = "<group>"; };
-		D1898E141DDC51C700A05BF5 /* teacherHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = teacherHomeViewController.swift; sourceTree = "<group>"; };
->>>>>>> cc4c73c904e10c620365168166b5c973b7f67988
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,14 +139,8 @@
 				271651B21DC72B890054BC9D /* LaunchScreen.storyboard */,
 				271651B51DC72B890054BC9D /* Info.plist */,
 				D147A29D1DDAF9C1006F837C /* studentHomeViewController.swift */,
-<<<<<<< HEAD
 				27ACDA881DDE5728006E2E7A /* loginControllers */,
 				27ACDA891DDE573F006E2E7A /* signUpControllers */,
-=======
-				D1898E101DDC4E7400A05BF5 /* teacherSignUpViewController.swift */,
-				D1898E121DDC50D300A05BF5 /* teacherLogInViewController.swift */,
-				D1898E141DDC51C700A05BF5 /* teacherHomeViewController.swift */,
->>>>>>> cc4c73c904e10c620365168166b5c973b7f67988
 			);
 			path = AssignmentPlusProto;
 			sourceTree = "<group>";
@@ -513,14 +495,11 @@
 			files = (
 				27ACDA871DDE571A006E2E7A /* teacherSignUpViewController.swift in Sources */,
 				D147A29E1DDAF9C1006F837C /* studentHomeViewController.swift in Sources */,
-				D1898E131DDC50D300A05BF5 /* teacherLogInViewController.swift in Sources */,
 				D147A29C1DDAE270006F837C /* studentLogInViewController.swift in Sources */,
 				27ACDA851DDE568F006E2E7A /* teacherLogInViewController.swift in Sources */,
 				271651AC1DC72B890054BC9D /* ViewController.swift in Sources */,
 				271651AA1DC72B890054BC9D /* AppDelegate.swift in Sources */,
 				D147A29A1DDAE208006F837C /* studentSignUpViewController.swift in Sources */,
-				D1898E151DDC51C700A05BF5 /* teacherHomeViewController.swift in Sources */,
-				D1898E111DDC4E7400A05BF5 /* teacherSignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
