@@ -1,7 +1,6 @@
 //
 //  teacherLogInViewController.swift
 //  AssignmentPlusProto
-//  test
 //  Created by Kyle Fong on 11/17/16.
 //  Copyright © 2016 CMPS 115. All rights reserved.
 //
@@ -15,7 +14,7 @@ class teacherLogInViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-//test
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
