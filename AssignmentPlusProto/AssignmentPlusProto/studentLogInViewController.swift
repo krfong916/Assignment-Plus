@@ -30,6 +30,7 @@ class studentLogInViewController: UIViewController {
         let studentUsername = studUsername.text;
         let studentPassword = studPassword.text;
         
+        //store data
         let studentUsernameStored = UserDefaults.standard.string(forKey: "studentEmail");
         let studentPasswordStored = UserDefaults.standard.string(forKey: "studentPassword");
         
@@ -52,12 +53,6 @@ class studentLogInViewController: UIViewController {
             return;
 
         }
-        
-        //display alert message
-        
-        //store data
-        
-        
         
     }
 
