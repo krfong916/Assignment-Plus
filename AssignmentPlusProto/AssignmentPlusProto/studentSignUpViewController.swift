@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class studentSignUpViewController: UIViewController {
-    
     
     @IBOutlet weak var studFirstText: UITextField!
     @IBOutlet weak var studLastText: UITextField!
@@ -20,14 +21,12 @@ class studentSignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     @IBAction func signUpButton(_ sender: Any) {
         
@@ -36,32 +35,42 @@ class studentSignUpViewController: UIViewController {
         let studEmail = studEmailText.text;
         let studPassword = studPasswordText.text;
         let studSchool = studSchoolText.text;
+        let studEmailStringCheck: Character = "@";
+        var studPasswordLengthCheck:Int
+            studPasswordLengthCheck = 6;
         
-        //check for empty fields
+        //Checks all text labels for null
         if(studFirst!.isEmpty || studLast!.isEmpty || studEmail!.isEmpty || studPassword!.isEmpty || studSchool!.isEmpty){
-            
-            //display alert message
-            myAlert(alertMessage: "All fields are required.")
-            return;
+            self.myAlert(alertMessage:"You must fill out all fields to sign up.");
+            return
         }
         
-        //store data
-        UserDefaults.standard.setValue(studEmail, forKey: "studentEmail")
-        UserDefaults.standard.setValue(studPassword, forKey: "studentPassword")
-        UserDefaults.standard.synchronize()
+        //Checks student email for a valid email format
+        if(studEmail?.characters.contains(studEmailStringCheck))!{
+        }else{
+            self.myAlert(alertMessage: "Please enter a valid email of the following format: yourTextHere@example.com");
+        }
         
-        //successful sign up message
-        let alert = UIAlertController(title: "Thank you!", message: "You are now registered.", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
-        dismiss(animated: true, completion: nil)
+        //Checks if password length is greater than 6
+        if((studPassword?.characters.count)! < studPasswordLengthCheck){
+            self.myAlert(alertMessage: "Please enter a password with more than 6 characters");
+        }
         
+        //Create student with the proper authentication credentials
+        FIRAuth.auth()?.createUser(withEmail: studEmail!, password: studPassword!, completion: { (user, error) in
+            if (error != nil){
+                print(error?.localizedDescription as Any)
+                self.myAlert(alertMessage:" " + (error?.localizedDescription)! as String)
+            }else{
+                print("Student has been created")
+            }
+        })
         
     }
     
     //alert message function
-    func myAlert (alertMessage: String){
-        
-        let alert = UIAlertController(title: "Alert", message: alertMessage, preferredStyle: UIAlertControllerStyle.alert)
+    func myAlert(alertMessage: String){
+        let alert = UIAlertController(title: "Hey there", message: alertMessage, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }

@@ -48,7 +48,7 @@ class studentLogInViewController: UIViewController {
             }
 
         }else{
-            myAlert(alertMessage: "Unkown username.")
+            myAlert(alertMessage: "Unknown username.")
             return;
 
         }
@@ -60,6 +60,7 @@ class studentLogInViewController: UIViewController {
         
         
     }
+
     
     func myAlert (alertMessage: String){
         
