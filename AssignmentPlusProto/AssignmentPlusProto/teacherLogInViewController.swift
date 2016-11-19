@@ -29,7 +29,6 @@ class teacherLogInViewController: UIViewController {
         let teacherLogInEmailText = teacherLogInEmail.text;
         let teacherLogInPasswordText = teacherLogInPassword.text;
         
-        
         //This function takes two arguments - teachersLogInEmailText and teachersLogInPasswordText as string values
         //If the teacher has entered an invalid email, the myAlert() function is called with parameters
         //If the teacher has entered an invalid password, the myAlert() function is called with parameters
@@ -37,9 +36,9 @@ class teacherLogInViewController: UIViewController {
         FIRAuth.auth()?.signIn(withEmail: teacherLogInEmailText!, password: teacherLogInPasswordText!, completion: { (user, error) in
             if(error != nil){
                 if(((error?.localizedDescription)! as String) == "There is no user record corresponding to this identifier. The user may have been deleted."){
-                    self.myAlert(alertMessage: "An account does not exist with that email")
+                    self.myAlert(alertMessage: "Sorry, there are no accounts that exist with that email")
                 }else if(((error?.localizedDescription)! as String) == "The password is invalid or the user does not have a password."){
-                    self.myAlert(alertMessage: "The password you have entered is invalid.")
+                    self.myAlert(alertMessage: "Sorry, the password you have entered is invalid.")
                 }else{
                     print(error?.localizedDescription as Any)
                 }

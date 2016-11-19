@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class studentLogInViewController: UIViewController {
     
@@ -27,44 +29,30 @@ class studentLogInViewController: UIViewController {
     
     @IBAction func studLogInButton(_ sender: Any) {
         
-        let studentUsername = studUsername.text;
-        let studentPassword = studPassword.text;
+        let studentUsernameText = studUsername.text;
+        let studentPasswordText = studPassword.text;
         
-        let studentUsernameStored = UserDefaults.standard.string(forKey: "studentEmail");
-        let studentPasswordStored = UserDefaults.standard.string(forKey: "studentPassword");
-        
-        if(studentUsernameStored == studentUsername){
-            if(studentPasswordStored == studentPassword){
-                
-                //login successful, change view to student home
-                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                let vc: studentHomeViewController = storyBoard.instantiateViewController(withIdentifier: "studentHome") as! studentHomeViewController
-                self.present(vc, animated:true, completion:nil)
-                
+        FIRAuth.auth()?.signIn(withEmail: studentUsernameText!, password: studentPasswordText!, completion: { (user, error) in
+            if(error != nil){
+                if(((error?.localizedDescription)! as String) == "There is no user record corresponding to this identifier. The user may have been deleted."){
+                    self.myAlert(alertMessage: "Sorry, there are no accounts with that email")
+                }else if(((error?.localizedDescription)! as String) == "The password is invalid or the user does not have a password."){
+                    self.myAlert(alertMessage: "Sorry, the password you have entered is invalid.")
+                }else{
+                    print(error?.localizedDescription as Any)
+                }
             }else{
-                
-                myAlert(alertMessage: "Incorrect password.")
-                return;
+                print("Student has logged in")
             }
+        })
+        
 
-        }else{
-            myAlert(alertMessage: "Unknown username.")
-            return;
-
-        }
-        
-        //display alert message
-        
-        //store data
-        
-        
-        
     }
 
     
     func myAlert (alertMessage: String){
         
-        let alert = UIAlertController(title: "Alert", message: alertMessage, preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "Hi", message: alertMessage, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
