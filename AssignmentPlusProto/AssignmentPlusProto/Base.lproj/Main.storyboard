@@ -262,7 +262,7 @@
         <!--Teacher Log In View Controller-->
         <scene sceneID="yE4-cq-wAo">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="dn5-NQ-GCu" customClass="teacherLogInViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="dn5-NQ-GCu" customClass="teacherLogInViewController" customModule="AssignmentPlusProto" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JCt-z7-GBV"/>
                         <viewControllerLayoutGuide type="bottom" id="0m2-oE-E3G"/>
@@ -297,6 +297,9 @@
                                 </constraints>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginAction:" destination="dn5-NQ-GCu" eventType="touchUpInside" id="dIL-JY-DQs"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1lh-co-erB" userLabel="SignInNoAccountText">
                                 <rect key="frame" x="44" y="464" width="209" height="16"/>
@@ -384,10 +387,14 @@
                             <constraint firstItem="PhO-TQ-Y4r" firstAttribute="trailing" secondItem="pF8-fg-TCc" secondAttribute="trailing" id="yv8-29-wXH"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="teacherLogInEmail" destination="2ZR-nU-Qaz" id="Isl-dt-WOd"/>
+                        <outlet property="teacherLogInPassword" destination="SDj-bu-ZfP" id="8Ja-YL-6OF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aI6-ba-qns" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1595" y="1609"/>
+            <point key="canvasLocation" x="1018" y="1626"/>
         </scene>
         <!--studentHome-->
         <scene sceneID="mFT-20-5ok">
@@ -679,7 +686,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytg-4x-r6j">
                                 <rect key="frame" x="16" y="570.5" width="201" height="21"/>
@@ -788,7 +795,7 @@
         <image name="education_doodle_teacher_sm" width="301" height="197"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Osh-AH-Aj5"/>
         <segue reference="yQI-m3-ZCD"/>
+        <segue reference="Osh-AH-Aj5"/>
     </inferredMetricsTieBreakers>
 </document>
