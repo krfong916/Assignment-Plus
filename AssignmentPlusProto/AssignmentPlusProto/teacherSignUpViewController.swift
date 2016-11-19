@@ -60,14 +60,9 @@ class teacherSignUpViewController: UIViewController {
         //Create teacher with the proper authentication credentials
         FIRAuth.auth()?.createUser(withEmail: teacherEmailText!, password: teacherPasswordText!, completion: { (data, error) in
             if(error != nil){
-                if((error?.localizedDescription)! as String == "The email address is already in use by another account."){
-                    self.myAlert(alertMessage: "The email address is already in use by another account. Please sign up with a different email.")
-                }
                 print(error?.localizedDescription as Any)
             }else{
                 print("Teacher has been created")
-                self.myAlert(alertMessage: "You have successfully created an account!");
-                self.performSegue(withIdentifier: "teacherSignUpRedirectToSignIn", sender: self);
             }
         })
     }

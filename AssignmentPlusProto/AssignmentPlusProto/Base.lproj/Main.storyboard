@@ -521,7 +521,6 @@
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
                                     <action selector="signUpButton:" destination="1LR-kF-5zc" eventType="touchUpInside" id="xMv-yE-UJM"/>
-                                    <segue destination="b6i-wu-tUM" kind="presentation" identifier="studentSignUpRedirectToSignIn" id="ESg-W0-cdh"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3c4-ab-hAP">
@@ -594,7 +593,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kJS-u6-q27" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2420" y="69"/>
+            <point key="canvasLocation" x="2164" y="69"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bJT-RM-25p">
@@ -707,7 +706,6 @@
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
                                     <action selector="signUpButton:" destination="kka-92-lMQ" eventType="touchUpInside" id="GJB-Rw-Le4"/>
-                                    <segue destination="dn5-NQ-GCu" kind="presentation" identifier="teacherSignUpRedirectToSignIn" id="Fit-db-6bN"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="education_doodle_teacher_sm" translatesAutoresizingMaskIntoConstraints="NO" id="AiU-75-CDQ">
@@ -729,7 +727,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9AZ-0A-JMf">
-                                <rect key="frame" x="264" y="620.5" width="95" height="33"/>
+                                <rect key="frame" x="264" y="621" width="95" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Sign in here.">
                                     <color key="titleColor" red="0.29411764709999999" green="0.4039215686" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -790,7 +788,7 @@
         <image name="education_doodle_teacher_sm" width="301" height="197"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="af8-YB-zdv"/>
-        <segue reference="ESg-W0-cdh"/>
+        <segue reference="Osh-AH-Aj5"/>
+        <segue reference="yQI-m3-ZCD"/>
     </inferredMetricsTieBreakers>
 </document>

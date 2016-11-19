@@ -59,15 +59,10 @@ class studentSignUpViewController: UIViewController {
         //Create student with the proper authentication credentials
         FIRAuth.auth()?.createUser(withEmail: studEmail!, password: studPassword!, completion: { (user, error) in
             if (error != nil){
-                if((error?.localizedDescription)! as String == "The email address is already in use by another account."){
-                    self.myAlert(alertMessage: "The email address is already in use by another account. Please sign up with a different email.");
-                }
                 print(error?.localizedDescription as Any)
                 self.myAlert(alertMessage:" " + (error?.localizedDescription)! as String)
             }else{
                 print("Student has been created")
-                self.myAlert(alertMessage: "You have successfully created an account!");
-                self.performSegue(withIdentifier: "studentSignUpRedirectToSignIn", sender: self)
             }
         })
         

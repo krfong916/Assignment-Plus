@@ -1,0 +1,11 @@
+{
+	"teacher": [
+	{"firstName":"Tyler", "lastName":"Johnson", "school":"C.K. McClatchy", "email":"tjohnson@scusd.edu", "password":"TEST123abc"},
+	{"firstName":"Tran", "lastName":"Nguyen", "school":"C.K. McClatchy", "email":"tnguyen@scusd.edu", "password":"TEST456abc"},
+]}
+
+{
+	"student": [
+	{"firstName":"Sarah", "lastName":"rock", "school":"C.K. McClatchy", "phone":"123-456-7890", "password":"test123ABC"}
+]}
+
