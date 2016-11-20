@@ -9,6 +9,8 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseDatabase
+import FirebaseInstanceID
 
 class teacherSignUpViewController: UIViewController {
 
@@ -20,18 +22,27 @@ class teacherSignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
+    //Calls three functions:
+    //Check if input text contains no errors
+    //Authenticate user -> teacher
+    //Insert teacher's information into database
     @IBAction func signUpButton(_ sender: Any) {
-   
+        tryCatchTextFieldErrors(teacherFirstName: teacherFirstName, teacherLastName: teacherLastName, teacherEmail: teacherEmail, teacherPassword: teacherPassword, teacherSchool: teacherSchool);
+        createTeacher(teacherEmail: teacherEmail, teacherPassword: teacherPassword);
+        insertUserToTeacherTable(teacherFirstName: teacherFirstName, teacherLastName: teacherLastName, teacherEmail: teacherEmail, teacherPassword: teacherPassword, teacherSchool: teacherSchool);
+    }
+    
+    //Checks the teacherSignUpView's text fields for errors
+    func tryCatchTextFieldErrors(teacherFirstName: UITextField, teacherLastName: UITextField, teacherEmail: UITextField, teacherPassword: UITextField, teacherSchool: UITextField){
         let teacherFirstNameText = teacherFirstName.text;
         let teacherLastNameText = teacherLastName.text;
         let teacherEmailText = teacherEmail.text;
@@ -39,7 +50,7 @@ class teacherSignUpViewController: UIViewController {
         let teacherSchoolText = teacherSchool.text;
         let teacherEmailStringCheck: Character = "@";
         var teacherPasswordLengthCheck:Int
-            teacherPasswordLengthCheck = 6;
+        teacherPasswordLengthCheck = 6;
         
         //Checks all text labels for null
         if(teacherFirstNameText!.isEmpty || teacherLastNameText!.isEmpty || teacherEmailText!.isEmpty || teacherPasswordText!.isEmpty || teacherSchoolText!.isEmpty){
@@ -56,7 +67,12 @@ class teacherSignUpViewController: UIViewController {
         if((teacherPasswordText?.characters.count)! < teacherPasswordLengthCheck){
             self.myAlert(alertMessage: "Please enter a password with more than 6 characters");
         }
-        
+    }
+    
+    //Creates a user account in the database
+    func createTeacher(teacherEmail: UITextField, teacherPassword: UITextField){
+        let teacherEmailText = teacherEmail.text;
+        let teacherPasswordText = teacherPassword.text;
         //Create teacher with the proper authentication credentials
         FIRAuth.auth()?.createUser(withEmail: teacherEmailText!, password: teacherPasswordText!, completion: { (data, error) in
             if(error != nil){
@@ -67,11 +83,29 @@ class teacherSignUpViewController: UIViewController {
         })
     }
     
+    //Inserts the user's information to the appropriate rows
+    //The database is a nested data structure
+    func insertUserToTeacherTable(teacherFirstName: UITextField, teacherLastName: UITextField, teacherEmail: UITextField, teacherPassword: UITextField, teacherSchool: UITextField){
+        let teacherFirstNameText = teacherFirstName.text;
+        let teacherLastNameText = teacherLastName.text;
+        let teacherEmailText = teacherEmail.text;
+        let teacherPasswordText = teacherPassword.text;
+        let teacherSchoolText = teacherSchool.text;
+        let ref = FIRDatabase.database().reference()
+        
+        ref.child("Teacher").childByAutoId().setValue(["first_name": teacherFirstNameText, "last_name": teacherLastNameText, "email": teacherEmailText, "password": teacherPasswordText, "school": teacherSchoolText])
+    }
+    
     func myAlert(alertMessage: String){
         let alert = UIAlertController(title: "Hi", message: alertMessage, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+    
+    
+    
+    
+    
     
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        var schoolName: teacherHomeViewController = segue.destination as! teacherHomeViewController;
