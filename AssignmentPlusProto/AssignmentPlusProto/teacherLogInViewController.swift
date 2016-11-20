@@ -43,7 +43,11 @@ class teacherLogInViewController: UIViewController {
                     print(error?.localizedDescription as Any)
                 }
             }else{
+                //successful login, switch to teacher home view controller
                 print("Teacher has logged in")
+                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                let vc: teacherHomeViewController = storyBoard.instantiateViewController(withIdentifier: "teacherHome") as! teacherHomeViewController
+                self.present(vc, animated:true, completion:nil)
             }
         })
         
@@ -54,14 +58,6 @@ class teacherLogInViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated:true, completion:nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+   
 }
