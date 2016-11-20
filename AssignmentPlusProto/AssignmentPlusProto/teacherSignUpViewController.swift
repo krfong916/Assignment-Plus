@@ -72,5 +72,12 @@ class teacherSignUpViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        var schoolName: teacherHomeViewController = segue.destination as! teacherHomeViewController;
+//        
+//        schoolName.receiveSchool = teacherSchoolText;
+    //}
+
 
 }
