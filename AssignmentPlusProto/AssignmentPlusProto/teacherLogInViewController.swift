@@ -45,9 +45,10 @@ class teacherLogInViewController: UIViewController {
             }else{
                 //successful login, switch to teacher home view controller
                 print("Teacher has logged in")
+                
                 let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-                let vc: teacherHomeViewController = storyBoard.instantiateViewController(withIdentifier: "teacherHome") as! teacherHomeViewController
-                self.present(vc, animated:true, completion:nil)
+                let nvc: teacherHomeViewController = storyBoard.instantiateViewController(withIdentifier: "teacherHome") as! teacherHomeViewController
+                self.present(nvc, animated:true, completion:nil)
             }
         })
         

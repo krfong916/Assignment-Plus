@@ -173,7 +173,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtC-He-lw1" userLabel="SignInSignUpButton">
-                                <rect key="frame" x="261" y="423" width="71" height="25"/>
+                                <rect key="frame" x="261" y="423" width="71" height="25.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="71" id="J1W-5a-L44"/>
                                 </constraints>
@@ -207,13 +207,13 @@
                                     <constraint firstAttribute="width" secondItem="xcH-2U-bgY" secondAttribute="height" multiplier="3:2" id="tFT-k2-wDx"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Assignment Plus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yEa-yD-h99">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Assignment Plus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yEa-yD-h99">
                                 <rect key="frame" x="58" y="77" width="260" height="37"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="32"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="for Students" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="moh-9m-kEh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="for Students" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="moh-9m-kEh">
                                 <rect key="frame" x="93" y="122" width="189" height="37"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="32"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -308,7 +308,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PhO-TQ-Y4r" userLabel="TestSignInSignUpButton">
-                                <rect key="frame" x="261" y="458" width="71" height="25"/>
+                                <rect key="frame" x="261" y="458" width="71" height="25.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="71" id="wC4-a0-Hjz"/>
                                 </constraints>
@@ -605,7 +605,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lCl-Rk-EJs" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wQG-gQ-e5a">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="wQG-gQ-e5a">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -825,10 +825,6 @@
                             <constraint firstItem="x3N-sx-5Bk" firstAttribute="top" secondItem="raf-N0-mrA" secondAttribute="bottom" constant="567" id="Mqe-eF-YAZ"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="dateText" destination="DfN-KV-AKi" id="rBm-5W-7H6"/>
-                        <outlet property="schoolNameText" destination="waq-dk-Die" id="ZaJ-r5-pDI"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OMk-5C-dTD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -840,7 +836,7 @@
         <image name="education_doodle_teacher_sm" width="301" height="197"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yQI-m3-ZCD"/>
-        <segue reference="v0e-Mf-2oD"/>
+        <segue reference="Osh-AH-Aj5"/>
+        <segue reference="wah-Gj-VdA"/>
     </inferredMetricsTieBreakers>
 </document>

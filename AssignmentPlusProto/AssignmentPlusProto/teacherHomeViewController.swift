@@ -9,17 +9,11 @@
 import UIKit
 
 class teacherHomeViewController: UIViewController {
-
-//    @IBOutlet weak var schoolNameText: UILabel!
-//    @IBOutlet weak var dateText: UILabel!
-//    
-//    var receiveSchool: String = ""
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //schoolNameText.text = receiveSchool;
     }
 
     override func didReceiveMemoryWarning() {
