@@ -36,13 +36,13 @@ class teacherSignUpViewController: UIViewController {
     //Authenticate user -> teacher
     //Insert teacher's information into database
     @IBAction func signUpButton(_ sender: Any) {
-        tryCatchTextFieldErrors(teacherFirstName: teacherFirstName, teacherLastName: teacherLastName, teacherEmail: teacherEmail, teacherPassword: teacherPassword, teacherSchool: teacherSchool);
+        checkForTextFieldErrors(teacherFirstName: teacherFirstName, teacherLastName: teacherLastName, teacherEmail: teacherEmail, teacherPassword: teacherPassword, teacherSchool: teacherSchool);
         createTeacher(teacherEmail: teacherEmail, teacherPassword: teacherPassword);
         insertUserToTeacherTable(teacherFirstName: teacherFirstName, teacherLastName: teacherLastName, teacherEmail: teacherEmail, teacherPassword: teacherPassword, teacherSchool: teacherSchool);
     }
     
     //Checks the teacherSignUpView's text fields for errors
-    func tryCatchTextFieldErrors(teacherFirstName: UITextField, teacherLastName: UITextField, teacherEmail: UITextField, teacherPassword: UITextField, teacherSchool: UITextField){
+    func checkForTextFieldErrors(teacherFirstName: UITextField, teacherLastName: UITextField, teacherEmail: UITextField, teacherPassword: UITextField, teacherSchool: UITextField){
         let teacherFirstNameText = teacherFirstName.text;
         let teacherLastNameText = teacherLastName.text;
         let teacherEmailText = teacherEmail.text;

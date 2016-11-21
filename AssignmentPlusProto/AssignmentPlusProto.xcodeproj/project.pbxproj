@@ -209,8 +209,8 @@
 		D1A41B341DE111DF005CD409 /* homeControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D147A29D1DDAF9C1006F837C /* studentHomeViewController.swift */,
 				D1A41B321DE111D6005CD409 /* teacherHomeViewController.swift */,
+				D147A29D1DDAF9C1006F837C /* studentHomeViewController.swift */,
 			);
 			name = homeControllers;
 			sourceTree = "<group>";

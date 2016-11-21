@@ -12,9 +12,11 @@ import FirebaseDatabase
 
 class teacherHomeViewController: UIViewController {
     
+    @IBOutlet weak var theDate: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        theDate.text = DateFormatter.localizedString(from: NSDate() as Date, dateStyle:DateFormatter.Style.full, timeStyle: DateFormatter.Style.none)
 
     }
 
@@ -29,14 +31,5 @@ class teacherHomeViewController: UIViewController {
         information.child("Teacher")
         
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
