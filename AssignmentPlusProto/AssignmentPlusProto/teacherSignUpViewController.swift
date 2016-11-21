@@ -94,6 +94,11 @@ class teacherSignUpViewController: UIViewController {
         let ref = FIRDatabase.database().reference()
         
         ref.child("Teacher").childByAutoId().setValue(["first_name": teacherFirstNameText, "last_name": teacherLastNameText, "email": teacherEmailText, "password": teacherPasswordText, "school": teacherSchoolText])
+        
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextController: teacherLogInViewController = storyBoard.instantiateViewController(withIdentifier: "teacherLogin") as! teacherLogInViewController
+        self.present(nextController, animated:true, completion:nil)
+
     }
     
     func myAlert(alertMessage: String){
