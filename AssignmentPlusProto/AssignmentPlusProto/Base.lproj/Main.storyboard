@@ -173,7 +173,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtC-He-lw1" userLabel="SignInSignUpButton">
-                                <rect key="frame" x="261" y="423" width="71" height="25"/>
+                                <rect key="frame" x="261" y="423" width="71" height="26.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="71" id="J1W-5a-L44"/>
                                 </constraints>
@@ -207,7 +207,7 @@
                                     <constraint firstAttribute="width" secondItem="xcH-2U-bgY" secondAttribute="height" multiplier="3:2" id="tFT-k2-wDx"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Assignment Plus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yEa-yD-h99">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Assignment Plus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yEa-yD-h99">
                                 <rect key="frame" x="58" y="77" width="260" height="37"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="32"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -308,7 +308,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PhO-TQ-Y4r" userLabel="TestSignInSignUpButton">
-                                <rect key="frame" x="261" y="458" width="71" height="25"/>
+                                <rect key="frame" x="261" y="458" width="71" height="25.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="71" id="wC4-a0-Hjz"/>
                                 </constraints>
@@ -605,7 +605,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lCl-Rk-EJs" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wQG-gQ-e5a">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="wQG-gQ-e5a">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -732,7 +732,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9AZ-0A-JMf">
-                                <rect key="frame" x="264" y="620" width="95" height="33"/>
+                                <rect key="frame" x="264" y="620.5" width="95" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Sign in here.">
                                     <color key="titleColor" red="0.29411764709999999" green="0.4039215686" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -949,6 +949,7 @@
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Add Class"/>
                                 <connections>
+                                    <action selector="addClassButton:" destination="Ixf-fB-wyB" eventType="touchUpInside" id="MDV-CX-llC"/>
                                     <action selector="signUpButton:" destination="kka-92-lMQ" eventType="touchUpInside" id="PuK-b6-ags"/>
                                 </connections>
                             </button>
@@ -989,7 +990,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="classNameText" destination="W0F-2M-5z8" id="vmF-2F-H6Q"/>
+                        <outlet property="periodText" destination="7h6-J1-B3N" id="zBg-OP-sWj"/>
                         <outlet property="subjectPicker" destination="ZQS-Gj-aec" id="l3q-Ls-7D2"/>
+                        <outlet property="termText" destination="M4h-ER-iDa" id="szh-bX-CC0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ASe-4T-10s" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -10,12 +10,15 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-class teacherLogInViewController: UIViewController {
+class teacherLogInViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var teacherLogInEmail: UITextField!
     @IBOutlet weak var teacherLogInPassword: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.teacherLogInEmail.delegate = self
+        self.teacherLogInPassword.delegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -59,6 +62,19 @@ class teacherLogInViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated:true, completion:nil)
     }
+    
+    //hide keyboard when user touches outside keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    //hide keyboard with user hits "return"
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        teacherLogInEmail.resignFirstResponder()
+        teacherLogInPassword.resignFirstResponder()
+        return(true)
+    }
+
     
    
 }

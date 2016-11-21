@@ -12,7 +12,7 @@ import FirebaseAuth
 import FirebaseDatabase
 import FirebaseInstanceID
 
-class teacherSignUpViewController: UIViewController {
+class teacherSignUpViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var teacherFirstName: UITextField!
     @IBOutlet weak var teacherLastName: UITextField!
@@ -23,7 +23,11 @@ class teacherSignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        self.teacherFirstName.delegate = self
+        self.teacherLastName.delegate = self
+        self.teacherEmail.delegate = self
+        self.teacherPassword.delegate = self
+        self.teacherSchool.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -97,6 +101,22 @@ class teacherSignUpViewController: UIViewController {
             }
         })
     }
+    
+    //hide keyboard when user touches outside keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    //hide keyboard with user hits "return"
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        teacherFirstName.resignFirstResponder()
+        teacherLastName.resignFirstResponder()
+        teacherEmail.resignFirstResponder()
+        teacherPassword.resignFirstResponder()
+        teacherSchool.resignFirstResponder()
+        return(true)
+    }
+
     
     func myAlert(alertMessage: String){
         let alert = UIAlertController(title: "Hi", message: alertMessage, preferredStyle: UIAlertControllerStyle.alert)
