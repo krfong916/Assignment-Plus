@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class teacherHomeViewController: UIViewController {
     
@@ -22,6 +24,11 @@ class teacherHomeViewController: UIViewController {
     }
     
 
+    func getTeacherInformation(){
+        let information = FIRDatabase.database().reference()
+        information.child("Teacher")
+        
+    }
     /*
     // MARK: - Navigation
 
