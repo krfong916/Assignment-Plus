@@ -37,8 +37,7 @@ class teacherSignUpViewController: UIViewController {
     //Insert teacher's information into database
     @IBAction func signUpButton(_ sender: Any) {
         checkForTextFieldErrors(teacherFirstName: teacherFirstName, teacherLastName: teacherLastName, teacherEmail: teacherEmail, teacherPassword: teacherPassword, teacherSchool: teacherSchool);
-        createTeacher(teacherEmail: teacherEmail, teacherPassword: teacherPassword);
-        insertUserToTeacherTable(teacherFirstName: teacherFirstName, teacherLastName: teacherLastName, teacherEmail: teacherEmail, teacherPassword: teacherPassword, teacherSchool: teacherSchool);
+        createTeacher(teacherFirstName: teacherFirstName, teacherLastName: teacherLastName, teacherEmail: teacherEmail, teacherPassword: teacherPassword, teacherSchool: teacherSchool);
     }
     
     //Checks the teacherSignUpView's text fields for errors
@@ -70,22 +69,10 @@ class teacherSignUpViewController: UIViewController {
     }
     
     //Creates a user account in the database
-    func createTeacher(teacherEmail: UITextField, teacherPassword: UITextField){
-        let teacherEmailText = teacherEmail.text;
-        let teacherPasswordText = teacherPassword.text;
-        //Create teacher with the proper authentication credentials
-        FIRAuth.auth()?.createUser(withEmail: teacherEmailText!, password: teacherPasswordText!, completion: { (data, error) in
-            if(error != nil){
-                print(error?.localizedDescription as Any)
-            }else{
-                print("Teacher has been created")
-            }
-        })
-    }
-    
     //Inserts the user's information to the appropriate rows
     //The database is a nested data structure
-    func insertUserToTeacherTable(teacherFirstName: UITextField, teacherLastName: UITextField, teacherEmail: UITextField, teacherPassword: UITextField, teacherSchool: UITextField){
+    func createTeacher(teacherFirstName: UITextField, teacherLastName: UITextField, teacherEmail: UITextField, teacherPassword: UITextField, teacherSchool: UITextField){
+        
         let teacherFirstNameText = teacherFirstName.text;
         let teacherLastNameText = teacherLastName.text;
         let teacherEmailText = teacherEmail.text;
@@ -93,12 +80,22 @@ class teacherSignUpViewController: UIViewController {
         let teacherSchoolText = teacherSchool.text;
         let ref = FIRDatabase.database().reference()
         
-        ref.child("Teacher").childByAutoId().setValue(["first_name": teacherFirstNameText, "last_name": teacherLastNameText, "email": teacherEmailText, "password": teacherPasswordText, "school": teacherSchoolText])
-        
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextController: teacherLogInViewController = storyBoard.instantiateViewController(withIdentifier: "teacherLogin") as! teacherLogInViewController
-        self.present(nextController, animated:true, completion:nil)
-
+        //Create teacher with the proper authentication credentials
+        FIRAuth.auth()?.createUser(withEmail: teacherEmailText!, password: teacherPasswordText!, completion: { (data, error) in
+            if(error != nil){
+                print(error?.localizedDescription as Any)
+                if(((error?.localizedDescription)! as String) == "The email address is already in use by another account."){
+                    self.myAlert(alertMessage: "The email address is already in use by another account. Please use a different email address.")
+                }
+            }else{
+                print("Teacher has been created")
+                ref.child("Teacher").childByAutoId().setValue(["first_name": teacherFirstNameText, "last_name": teacherLastNameText, "email": teacherEmailText, "password": teacherPasswordText, "school": teacherSchoolText])
+                
+            /*    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                let nextController: teacherLogInViewController = storyBoard.instantiateViewController(withIdentifier: "teacherLogin") as! teacherLogInViewController
+                self.present(nextController, animated:true, completion:nil)*/
+            }
+        })
     }
     
     func myAlert(alertMessage: String){
@@ -106,17 +103,4 @@ class teacherSignUpViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
-    
-    
-    
-    
-    
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        var schoolName: teacherHomeViewController = segue.destination as! teacherHomeViewController;
-//        
-//        schoolName.receiveSchool = teacherSchoolText;
-    //}
-
-
 }
