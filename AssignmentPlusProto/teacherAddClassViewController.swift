@@ -115,6 +115,7 @@ class teacherAddClassViewController: UIViewController, UIPickerViewDelegate, UIP
         
     }
     
+    //Adds a class to the teacher table and school's class table
     func addClass(periodText: UITextField, classNameText: UITextField, termText: UITextField){
         let classPeriod = periodText.text
         let className = classNameText.text
