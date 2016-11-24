@@ -94,6 +94,10 @@ class teacherSignUpViewController: UIViewController, UITextFieldDelegate {
             }else{
                 print("Teacher has been created")
                 ref.child("Teacher").childByAutoId().setValue(["first_name": teacherFirstNameText, "last_name": teacherLastNameText, "email": teacherEmailText, "password": teacherPasswordText, "school": teacherSchoolText])
+<<<<<<< HEAD
+=======
+                self .performSegue(withIdentifier: "TeacherSignUpToIn", sender: self)
+>>>>>>> d7ca747c3ccd956ba026689f305382e51cf5ce24
                 
             /*    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
                 let nextController: teacherLogInViewController = storyBoard.instantiateViewController(withIdentifier: "teacherLogin") as! teacherLogInViewController

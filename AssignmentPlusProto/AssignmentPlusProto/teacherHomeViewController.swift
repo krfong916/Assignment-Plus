@@ -13,11 +13,14 @@ import FirebaseAuth
 
 class teacherHomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+<<<<<<< HEAD
     //var classes = [String]()
     //TEMP for tableview
     var classes = ["P4 Calculus", "P1 English", "P6 US History"]
     
     @IBOutlet weak var tableView: UITableView!
+=======
+>>>>>>> d7ca747c3ccd956ba026689f305382e51cf5ce24
     @IBOutlet weak var theDate: UILabel!
     @IBAction func logout(_ sender: Any) {
         if FIRAuth.auth()?.currentUser != nil{
@@ -35,9 +38,12 @@ class teacherHomeViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         theDate.text = DateFormatter.localizedString(from: NSDate() as Date, dateStyle:DateFormatter.Style.full, timeStyle: DateFormatter.Style.none)
+<<<<<<< HEAD
         
         //TEMP for tableview
         tableView.reloadData();
+=======
+>>>>>>> d7ca747c3ccd956ba026689f305382e51cf5ce24
 
     }
     override func didReceiveMemoryWarning() {
@@ -50,6 +56,7 @@ class teacherHomeViewController: UIViewController, UITableViewDelegate, UITableV
         information.child("Teacher")
         
     }
+<<<<<<< HEAD
     
     //number of rows to dsiplay in tableview
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -75,5 +82,7 @@ class teacherHomeViewController: UIViewController, UITableViewDelegate, UITableV
         let nextController: teacherAssignViewController = storyBoard.instantiateViewController(withIdentifier: "teacherAssign") as! teacherAssignViewController
         self.present(nextController, animated:true, completion:nil)
     }
+=======
+>>>>>>> d7ca747c3ccd956ba026689f305382e51cf5ce24
 
 }

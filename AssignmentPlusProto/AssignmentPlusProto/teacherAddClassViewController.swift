@@ -7,16 +7,23 @@
 //
 
 import UIKit
+<<<<<<< HEAD
 import Firebase
 import FirebaseCore
 import FirebaseDatabase
 
 class teacherAddClassViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate  {
     
+=======
+
+class teacherAddClassViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate  {
+
+>>>>>>> d7ca747c3ccd956ba026689f305382e51cf5ce24
     @IBOutlet weak var subjectPicker: UIPickerView!
     @IBOutlet weak var periodText: UITextField!
     @IBOutlet weak var classNameText: UITextField!
     @IBOutlet weak var termText: UITextField!
+<<<<<<< HEAD
     var selectedSubject:String = ""
     let userID = FIRAuth.auth()?.currentUser?.uid
     let ref = FIRDatabase.database().reference()
@@ -29,6 +36,16 @@ class teacherAddClassViewController: UIViewController, UIPickerViewDelegate, UIP
     //data for picker view
     var subjectArray = ["", "Science", "Math", "Literature", "History", "Art", "Government", "Language", "Music"];
     
+=======
+    
+    @IBAction func addClassButton(_ sender: Any) {
+        //INSER BUTTON STUFF HERE
+    }
+
+    //data for picker view
+    var subjectArray = ["Science", "Math", "Literature", "History", "Art", "Government", "Language", "Music"];
+
+>>>>>>> d7ca747c3ccd956ba026689f305382e51cf5ce24
     @IBAction func closeButton(_ sender: Any){
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextController: teacherHomeViewController = storyBoard.instantiateViewController(withIdentifier: "teacherHome") as! teacherHomeViewController
@@ -44,6 +61,7 @@ class teacherAddClassViewController: UIViewController, UIPickerViewDelegate, UIP
         
         //numberpad for period tect field
         periodText.keyboardType = UIKeyboardType.numberPad
+<<<<<<< HEAD
         
         //Input data into the picker view array
         subjectPicker.delegate = self
@@ -57,6 +75,14 @@ class teacherAddClassViewController: UIViewController, UIPickerViewDelegate, UIP
         })
     }
     
+=======
+
+        // Input data into the picker view array
+        subjectPicker.delegate = self
+        subjectPicker.dataSource = self
+    }
+
+>>>>>>> d7ca747c3ccd956ba026689f305382e51cf5ce24
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -91,6 +117,7 @@ class teacherAddClassViewController: UIViewController, UIPickerViewDelegate, UIP
     
     //retreive data from subject picker
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+<<<<<<< HEAD
         let selectedSubjectInitializer = subjectArray[row]
         selectedSubject = selectedSubjectInitializer
     }
@@ -131,4 +158,10 @@ class teacherAddClassViewController: UIViewController, UIPickerViewDelegate, UIP
         self.present(alert, animated:true, completion:nil)
         
     }
+=======
+        let selectedSubject = subjectArray[row]
+    }
+    
+
+>>>>>>> d7ca747c3ccd956ba026689f305382e51cf5ce24
 }
