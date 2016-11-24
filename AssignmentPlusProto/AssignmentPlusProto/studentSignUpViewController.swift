@@ -68,6 +68,7 @@ class studentSignUpViewController: UIViewController, UITextFieldDelegate {
                 self.myAlert(alertMessage:" " + (error?.localizedDescription)! as String)
             }else{
                 print("Student has been created")
+                self .performSegue(withIdentifier: "StudentSignUpToIn", sender: self)
             }
         })
         
